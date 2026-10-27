@@ -1,0 +1,6 @@
+ccxt
+pyTelegramBotAPI
+pandas
+SQLAlchemy
+ta
+psycopg2-binary

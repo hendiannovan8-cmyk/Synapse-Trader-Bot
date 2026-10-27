@@ -1,0 +1,6 @@
+# Abaikan file konfigurasi sensitif dan lingkungan virtual
+config.py
+.venv/
+venv/
+__pycache__/
+.env
