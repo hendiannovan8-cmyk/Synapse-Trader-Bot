@@ -1,3 +1,4 @@
+#Librarys in Python you can use in your project
 ccxt
 pyTelegramBotAPI
 pandas
