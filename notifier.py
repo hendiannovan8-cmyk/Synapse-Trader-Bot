@@ -38,5 +38,7 @@ def cek_sinyal(message):
     except Exception as e:
         bot.reply_to(message, 'Gagal memproses analisis sinyal dari database.')
         print(f'Detail Error: {e}')
-
+if __name__ == "__main__":
+    print("Bot Telegram notifier berjalan...", flush=True)
+    bot.infinity_polling()
 # ... (lanjutan handler lainnya)
