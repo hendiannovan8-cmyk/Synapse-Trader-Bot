@@ -4,7 +4,7 @@ import pandas as pd
 import config
 from sqlalchemy import create_engine  # <-- Tambahan untuk database
 
-engine = create_engine(config.DATABASE_URL)
+engine = create_engine(config.DATABASE_URL, pool_pre_ping = True)
 
 exchange = ccxt.indodax({
     'apiKey': config.indodax_api_key,
