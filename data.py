@@ -4,11 +4,7 @@ import pandas as pd
 import config
 from sqlalchemy import create_engine  # <-- Tambahan untuk database
 
-# 1. Hubungkan ke Cloud Database (Contoh menggunakan PostgreSQL/Supabase)
-# Format: 'postgresql://username:password@host:port/namadatabase'
-DATABASE_URL = "postgresql://postgres:N0v4n1611017@db.tfsvqtuxfzdhuucgaqnp.supabase.co:5432/postgres"
-engine = create_engine(DATABASE_URL)
-
+engine = create_engine(config.DATABASE_URL)
 
 exchange = ccxt.indodax({
     'apiKey': config.indodax_api_key,

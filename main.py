@@ -5,7 +5,7 @@ import threading
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-SCRIPTS = ["data.py", "notifier.py", "strategy.py"]
+SCRIPTS = ["data.py","indicators.py", "strategy.py","notifier.py"]
 
 
 def run_script(script_name):

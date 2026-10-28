@@ -1,8 +1,10 @@
 #Librarys in Python you can use in your project
 ccxt
 pyTelegramBotAPI
+telebot
 pandas
 SQLAlchemy
 ta
 psycopg2-binary
 python-dotenv
+psycopg
