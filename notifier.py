@@ -8,7 +8,11 @@ from indicators import calculate_supertrend, add_indicators, evaluate  # <-- Dii
 telegram_token = config.telegram_token
 bot = telebot.TeleBot(telegram_token)
 exchange = ccxt.indodax()
-engine = create_engine(config.DATABASE_URL, pool_pre_ping = True)
+engine = create_engine(
+    config.DATABASE_URL, 
+    pool_pre_ping=True,
+    connect_args={'prepare_threshold': None}
+)
 
 # ... (kode handler /sinyal Anda menjadi sangat bersih):
 @bot.message_handler(commands=['sinyal'])

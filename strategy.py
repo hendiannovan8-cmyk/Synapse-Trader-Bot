@@ -6,7 +6,11 @@ from sqlalchemy import create_engine
 from indicators import calculate_supertrend, add_indicators, evaluate
 
 # Hubungkan ke database dengan pool_pre_ping agar koneksi stabil
-engine = create_engine(config.DATABASE_URL, pool_pre_ping=True)
+engine = create_engine(
+    config.DATABASE_URL, 
+    pool_pre_ping=True,
+    connect_args={'prepare_threshold': None}
+)
 
 # Inisialisasi bot Telegram untuk pengiriman pesan otomatis
 bot = telebot.TeleBot(config.telegram_token) if config.telegram_token else None
